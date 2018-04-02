@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour {
+public class BouncyPlatform : MonoBehaviour {
 
 	public GameObject platformPrefab;
 
-	public int numberOfPlatforms = 200; //number of platforms for our levels 
+	public int numberOfPlatforms = 10; //number of platforms for our levels 
 	public float levelWidth = 3f;
-	public float minY = 1f; 
-	public float maxY = 3.2f;
+	public float minY = 50f; 
+	public float maxY = 50f;
 
 	// Use this for initialization
 	void Start () {
