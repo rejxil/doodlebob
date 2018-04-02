@@ -29,4 +29,12 @@ public class Player : MonoBehaviour {
 		velocity.x = movement;
 		rb.velocity = velocity;
 	}
+
+	void OnBecameInvisible() {
+		Die();
+	}
+
+	public void Die() {
+		Application.LoadLevel (Application.loadedLevel);
+	}
 }
