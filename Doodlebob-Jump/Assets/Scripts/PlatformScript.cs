@@ -23,6 +23,9 @@ public class PlatformScript : MonoBehaviour {
 				velocity.y = jumpForce; 
 				rb.velocity = velocity;
 			}
+
+			Destroy (gameObject);
+				
 		}
 	}
 }

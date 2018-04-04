@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))] //to ensure that there will always be a Rigidbody component on the gameobject
 
@@ -21,8 +22,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		movement = Input.GetAxis("Horizontal") * movementSpeed;
-	}
 
+	}
+		
 	void FixedUpdate()
 	{
 		Vector2 velocity = rb.velocity;
@@ -31,10 +33,11 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnBecameInvisible() {
-		Die();
+		Die ();
 	}
 
-	public void Die() {
-		Application.LoadLevel (Application.loadedLevel);
+	void Die() {
+		SceneManager.LoadScene (0);
 	}
+		
 }

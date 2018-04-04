@@ -487,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 569032281}
+  platform: {fileID: 4496618135043472, guid: 3c768784d47e07d40a8d814497de8bbf, type: 2}
 --- !u!1 &2126910646
 GameObject:
   m_ObjectHideFlags: 0

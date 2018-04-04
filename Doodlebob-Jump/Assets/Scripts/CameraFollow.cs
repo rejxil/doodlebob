@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
 	public Transform target;
+	public Transform platform; 
 
 	// Update is called once per frame
 	void Update () {
