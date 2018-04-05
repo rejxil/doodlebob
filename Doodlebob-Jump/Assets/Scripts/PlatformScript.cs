@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class PlatformScript : MonoBehaviour {
 
-	public int currentScore;
-	public Text displayScore;
-
 	public float jumpForce = 10f; 
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
+
+		Debug.Log("Collision detected!");
 		//upward force being applied due to 2D effector but no collision is actually happening
 		//therefore we need to check if object is coming from above or from below
 
@@ -28,15 +27,10 @@ public class PlatformScript : MonoBehaviour {
 				rb.velocity = velocity;
 			}
 
+			LevelGenerator.currentScore += 10;
 			Destroy (gameObject);
 
-			currentScore += 10;
-				
 		}
 	}
 
-	void Update ()
-	{
-		displayScore.text = currentScore.ToString();
-	}
 }
