@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
 	public float movementSpeed = 10f;
+	bool isQuitting = false;
 
 	//reference to our Rigidbody2D
 	Rigidbody2D rb;
@@ -33,11 +34,17 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnBecameInvisible() {
-		Die ();
+		if (!isQuitting) {
+			Die ();
+		}
 	}
 
 	void Die() {
 		SceneManager.LoadScene (0);
+	}
+
+	void OnApplicationQuit() {
+		isQuitting = true;
 	}
 		
 }

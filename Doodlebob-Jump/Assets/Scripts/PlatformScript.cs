@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlatformScript : MonoBehaviour {
+
+	public int currentScore;
+	public Text displayScore;
 
 	public float jumpForce = 10f; 
 
@@ -25,7 +29,14 @@ public class PlatformScript : MonoBehaviour {
 			}
 
 			Destroy (gameObject);
+
+			currentScore += 10;
 				
 		}
+	}
+
+	void Update ()
+	{
+		displayScore.text = currentScore.ToString();
 	}
 }
