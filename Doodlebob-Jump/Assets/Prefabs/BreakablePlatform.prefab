@@ -71,6 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9f0beafeaeb9c4aa9f0790adf59f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 0
+  platform: {fileID: 21300000, guid: 10e7f3dc0293f7a42bc967336ab3d0fc, type: 3}
+  brokenPlatform: {fileID: 21300000, guid: 50cbe31a7a0c5b14ba91972e1262eb64, type: 3}
 --- !u!212 &212372656874032092
 SpriteRenderer:
   m_ObjectHideFlags: 1
