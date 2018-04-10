@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
 	void OnBecameInvisible() {
 		if (!isQuitting) {
 			Die ();
-			LevelGenerator.currentScore = 0;
+			NormalPlatform.currentScore = 0;
 		}
 	}
 

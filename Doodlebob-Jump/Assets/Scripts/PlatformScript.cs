@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class PlatformScript : MonoBehaviour {
 
-	public float jumpForce = 10f; 
+	public float jumpForce = 10f;
+	public LevelGenerator generator;
+	
 
+	public void SetGenerator(LevelGenerator lg)
+	{
+		generator = lg;
+	}
 
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -26,10 +32,18 @@ public class PlatformScript : MonoBehaviour {
 				rb.velocity = velocity;
 			}
 
-			LevelGenerator.currentScore += 10;
-			Destroy (gameObject);
+			NormalPlatform.currentScore += 10;
+
+			if (generator != null)
+				generator.MovePlatform (transform);
 
 		}
+	}
+
+	void OnBecameInvisible()
+	{
+		if (generator != null)
+			generator.MovePlatform (transform);
 	}
 
 }
