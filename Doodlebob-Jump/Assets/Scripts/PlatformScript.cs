@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlatformScript : MonoBehaviour {
 
-	public float jumpForce = 10f;
+	public float jumpForce = 11f;
 	public LevelGenerator generator;
 	
 

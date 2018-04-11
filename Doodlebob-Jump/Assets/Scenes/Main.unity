@@ -190,10 +190,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 1010486624198324, guid: 3c768784d47e07d40a8d814497de8bbf,
     type: 2}
-  numberOfPlatforms: 10
+  numberOfPlatforms: 15
   levelWidth: 3
   minY: 1
-  maxY: 3.2
+  maxY: 1.5
   displayScore: {fileID: 1989950121}
 --- !u!1001 &279860761
 Prefab:
@@ -370,6 +370,11 @@ Prefab:
       propertyPath: generator
       value: 
       objectReference: {fileID: 12998368}
+    - target: {fileID: 114559804956308168, guid: 3c768784d47e07d40a8d814497de8bbf,
+        type: 2}
+      propertyPath: jumpForce
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c768784d47e07d40a8d814497de8bbf, type: 2}
   m_IsPrefabParent: 0

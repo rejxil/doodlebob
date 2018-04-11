@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakablePlatform : MonoBehaviour {
+public class BreakablePlatform : LevelGenerator {
 
 	public GameObject platformPrefab;
 
