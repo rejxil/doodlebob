@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Break : MonoBehaviour {
 
-	public float jumpForce = 10f; 
+	public float jumpForce = 10f ; 
 
 	public Sprite platform; 
 	public Sprite brokenPlatform;
