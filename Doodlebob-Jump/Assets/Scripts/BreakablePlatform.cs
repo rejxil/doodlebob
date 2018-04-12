@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BreakablePlatform : LevelGenerator {
 
-	public GameObject platformPrefab;
+	public GameObject prefabPlatform;
 
-	public int numberOfPlatforms = 10; //number of platforms for our levels 
-	public float levelWidth = 3f;
-	public float minY = 10f; 
-	public float maxY = 20f;
+	public int nop = 10; //number of platforms for our levels 
+	public float widthLevel = 3f;
+	public float bottomY = 10f; 
+	public float topY = 20f;
 
 	// Use this for initialization
 	void Start () {
-		Vector3 spawnPosition = new Vector3 ();
-		for (int i = 0; i < numberOfPlatforms; i++) 
+		Vector3 positionSpawn = new Vector3 ();
+		for (int i = 0; i < nop; i++) 
 		{
-			spawnPosition.y += Random.Range (minY, maxY);
-			spawnPosition.x = Random.Range (-levelWidth, levelWidth); 
-			Instantiate (platformPrefab, spawnPosition, Quaternion.identity); //(Quaternion.identity means we won't rotate the object at all)
+			positionSpawn.y += Random.Range (bottomY, topY);
+			positionSpawn.x = Random.Range (-widthLevel, widthLevel); 
+			Instantiate (prefabPlatform, positionSpawn, Quaternion.identity); //(Quaternion.identity means we won't rotate the object at all)
 		}
 	}
 }
